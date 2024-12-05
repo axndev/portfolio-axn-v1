@@ -19,7 +19,8 @@ $(document).ready(function() {
         // Hide the loader once the page is fully loaded
         $(window).on('load', function () {
             $('#loader').fadeOut('slow');
-            $('.bodyLoader').fadeOut('slow'); // Fade out animation
+            $('.bodyLoader').fadeOut('slow');
+             // Fade out animation
             
         });
     });
@@ -41,3 +42,40 @@ const lenis = new Lenis({
   lenis.on('scroll', (e) => {
     console.log(e);
   });
+  document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = this.getAttribute('href').substring(1); // Get the id (remove the #)
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+    });
+});
+
+// Get the button element
+let backToTopButton = document.getElementById('backToTop');
+
+// When the user scrolls the page, check the position
+window.onscroll = function () {
+    if (window.scrollY >= document.querySelector('#about').offsetTop) {
+        // Show the button when the user reaches the #about section
+        backToTopButton.style.display = 'block';
+    } else {
+        // Hide the button when the user is above the #about section
+        backToTopButton.style.display = 'none';
+    }
+};
+
+// When the user clicks the "Back to Top" button
+backToTopButton.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Smooth scroll to the top
+    });
+};
