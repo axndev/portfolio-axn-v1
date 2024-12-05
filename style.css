@@ -11,7 +11,6 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
 }
 /* * {
     cursor:none; 
@@ -39,6 +38,98 @@ body {
     background-color: rgba(95, 95, 95, 0.527);
 } */
 
+/* Custom Scrollbar */
+
+/* width */
+/* ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-color); 
+    border: 1px solid black;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+  } */
+
+/* Custom scrollbar end */
+
+/* PreaLoader */
+#loader {
+    /* Uncomment this to make it run! */
+    /*
+       animation: loader 5s linear infinite; 
+    */
+    
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+  }
+  @keyframes loader {
+    0% { left: -100px }
+    100% { left: 110%; }
+  }
+  #box {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    animation: animate .5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+  }
+  @keyframes animate {
+    17% { border-bottom-right-radius: 3px; }
+    25% { transform: translateY(9px) rotate(22.5deg); }
+    50% {
+      transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+      border-bottom-right-radius: 40px;
+    }
+    75% { transform: translateY(9px) rotate(67.5deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+  } 
+  #shadow { 
+    width: 50px;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;
+  }
+  @keyframes shadow {
+    50% {
+      transform: scale(1.2,1);
+    }
+  }
+  
+  
+  body {
+    background: #6997DB; 
+    position: relative;
+    overflow-x: hidden;
+  }
+  .bodyLoader{
+    background-color: var(--primary-color);
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* Prealoader Styled End */
+
 main {
     background-color: var(--primary-color);
     width: 100vw;
@@ -55,6 +146,7 @@ body {
 
 body p {
     text-transform: none;
+    color: #dadada;
 }
 
 .mainBtn {
@@ -130,7 +222,6 @@ nav{
     top: 0;
     left: 0;
     right: 0;
-    padding: 1rem;
 }
 .mytitle::before {
     content: "";
@@ -143,12 +234,10 @@ nav{
 }
 
 .navbar {
-    max-width: 1300px;
     background-color: var(--secondary-color);
     color: var(--white);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.329);
     margin: auto;
-    border-radius: var(--border-radius);
     transition: max-width 0.3s ease-in-out;
 }
 .navbar.scrolled {
@@ -277,8 +366,10 @@ body .navbar .menu-open {
 
 /* Hero Section */
 
+.mainHero{
+    padding-top: 14rem;
+}
 .heroSection {
-    padding-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 3rem;
@@ -358,21 +449,25 @@ body .navbar .menu-open {
 }
 
 .service {
-    background: linear-gradient(150deg, #3498db, #3498db, #ffffff99);
+    background: var(--primary-color);
     border-radius: var(--border-radius);
-    padding: 2rem;
+    padding: 1rem;
     transition: all .4s ease-in-out;
     box-shadow: var(--box-shadow-medium);
-    border: 3px solid white;
+    box-shadow: -3px 3px 0px 3px var(--white);
 }
 
 .service:hover {
     transform: scale(1.02);
-    box-shadow: var(--box-shadow-dark);
+    box-shadow: -3px 3px 0px 3px var(--white);
+    border-color: var(--primary-color);
 }
 
 .service:hover .servicetn {
     max-width: 100%;
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 3px 3px 0px 3px white; ;
 }
 
 .service i {
@@ -386,10 +481,6 @@ body .navbar .menu-open {
     font-weight: 700;
     font-style: italic;
     margin: 1rem 0;
-}
-
-.servicedesc {
-    color: var(--text-color);
 }
 
 .servicetn i {
@@ -408,10 +499,11 @@ body .navbar .menu-open {
     text-transform: capitalize;
     background-color: var(--white);
     max-width: 170px;
-    border-radius: 20px;
     padding: 5px 15px;
-    transition: all .4s ease-in-out;
     font-size: 15px;
+    box-shadow: -3px 3px 0px 3px var(--secondary-color);
+    transition: all .3s ease-in-out;
+    border-radius: 8px;
 }
 
 .skills,
@@ -432,13 +524,13 @@ body .navbar .menu-open {
     border-radius: 8px;
     box-shadow: var(--box-shadow-light);
     transition: all .3s ease-in-out;
+    box-shadow: -3px 3px 0px 3px var(--secondary-color);
 }
 
 .skill:hover {
     transform: scale(1.02);
-    box-shadow: var(--box-shadow-dark);
-    background-color: var(--hover-color);
     border-color: var(--secondary-color);
+    box-shadow: -3px 3px 0px 3px var(--white);
 }
 
 .skillHeader {
@@ -583,9 +675,8 @@ progress::-webkit-progress-value {
     box-shadow: 3px 3px 0px 3px white;
 }
 .recomboard{
-    border: 3px solid white;
     transform: scale(1.07);
-    box-shadow: var(--box-shadow-dark);
+      box-shadow: -3px 3px 0px 3px var(--white);
 }
 .contactForm{
     width: 100%;
@@ -720,6 +811,12 @@ footer .container{
 }
 /* Mobile Menu Adjustments */
 @media (max-width: 860px) {
+    .navbar .nav-container a{
+        font-size: 20px;
+    }
+    .mainHero{
+        padding-top: 9rem;
+    }
     .myName{
         font-size: 2.5rem;
     }
@@ -738,7 +835,7 @@ footer .container{
         gap: 1.5rem;    
     }
     .container{
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
     .heroSection{
         flex-direction: column-reverse;
