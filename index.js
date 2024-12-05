@@ -15,21 +15,29 @@ $(document).ready(function() {
             $(".navbar").removeClass("scrolled");
         }
     });
+    $(document).ready(function () {
+        // Hide the loader once the page is fully loaded
+        $(window).on('load', function () {
+            $('#loader').fadeOut('slow');
+            $('.bodyLoader').fadeOut('slow'); // Fade out animation
+            
+        });
+    });
+    
     
 });
-var main = document.querySelector("main")
-var cursor = document.querySelector(".cursor")
-main.addEventListener("mousemove" ,function(dets){
-    cursor.style.left = dets.x + "px"
-    cursor.style.top = dets.y + "px"
-});
-
-$(window).scroll(function(){
-    if ($(window).scrollTop() >= 30) {
-        $('nav div').addClass('visible-title');
-    }
-    else {
-        $('nav').removeClass('fixed-header');
-        $('nav div').removeClass('visible-title');
-    }
-});
+// var main = document.querySelector("main")
+// var cursor = document.querySelector(".cursor")
+// main.addEventListener("mousemove" ,function(dets){
+//     cursor.style.left = dets.x + "px"
+//     cursor.style.top = dets.y + "px"
+// });
+// Initialize Lenis
+const lenis = new Lenis({
+    autoRaf: true,
+  });
+  
+  // Listen for the scroll event and log the event data
+  lenis.on('scroll', (e) => {
+    console.log(e);
+  });
