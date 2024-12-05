@@ -390,7 +390,7 @@ body .navbar .menu-open {
 }
 
 .heroText .myInfo {
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .heroSection .myImage {
@@ -506,7 +506,6 @@ body .navbar .menu-open {
     border-radius: 8px;
 }
 
-.skills,
 .pricingstart {
     padding-top: 3rem;
 }
