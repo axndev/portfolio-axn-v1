@@ -375,6 +375,7 @@ nav {
 }
 
 .menuIcons {
+    z-index:99;
     display: none;
     position: relative;
     width: 25px;
