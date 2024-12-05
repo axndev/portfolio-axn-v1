@@ -832,10 +832,10 @@ footer .container{
     .responsiveContainer{
         display: flex !important;
         flex-direction: column;
-        gap: 1.5rem;    
+        gap: 3rem;    
     }
     .container{
-        padding: 0 2rem;
+        padding: 0 1.2rem;
     }
     .heroSection{
         flex-direction: column-reverse;
@@ -898,7 +898,7 @@ footer .container{
     .story{
         border-bottom: 2px solid white;
         margin: 0;
-        padding: 1rem 0;
+        padding: 3rem 0;
     }
     .hiddenStory{
         display: none;
