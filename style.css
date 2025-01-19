@@ -476,7 +476,6 @@ body .navbar .menu-open {
 }
 
 .heroSection .myImage div {
-    padding: 10px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.2);
     display: flex;
@@ -497,6 +496,7 @@ body .navbar .menu-open {
     max-width: 330px;
     border-radius: 50%;
     margin-bottom: -11px;
+    transform: rotate(-10deg);
 }
 
 /* Services */
