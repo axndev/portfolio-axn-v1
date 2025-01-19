@@ -15,7 +15,6 @@ $(document).ready(function() {
             $(".navbar").removeClass("scrolled");
         }
     });
-    $(document).ready(function () {
         // Hide the loader once the page is fully loaded
         $(window).on('load', function () {
             $('#loader').fadeOut('slow');
@@ -23,7 +22,6 @@ $(document).ready(function() {
              // Fade out animation
             
         });
-    });
     
     
 });
