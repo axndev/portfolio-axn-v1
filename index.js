@@ -1,3 +1,21 @@
+// Hide the loader once the DOM content is fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.getElementById('loader');
+    const bodyLoader = document.querySelector('.bodyLoader');
+
+    if (loader) {
+        loader.style.transition = 'opacity 0.5s ease'; // Adjust duration as needed
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500); // Match the transition duration
+    }
+
+    if (bodyLoader) {
+        bodyLoader.style.transition = 'opacity 0.5s ease'; // Adjust duration as needed
+        bodyLoader.style.opacity = '0';
+        setTimeout(() => bodyLoader.style.display = 'none', 500); // Match the transition duration
+    }
+});
+
 $(document).ready(function() {
     $('.menuIcons').click(function() {
         $('.menu-items').toggleClass("menu-open");
@@ -14,15 +32,7 @@ $(document).ready(function() {
         } else {
             $(".navbar").removeClass("scrolled");
         }
-    });
-        // Hide the loader once the page is fully loaded
-        $(window).on('load', function () {
-            $('#loader').fadeOut('slow');
-            $('.bodyLoader').fadeOut('slow');
-             // Fade out animation
-            
-        });
-    
+    });  
     
 });
 // var main = document.querySelector("main")
