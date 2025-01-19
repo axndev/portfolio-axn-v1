@@ -1,5 +1,5 @@
-// Hide the loader once the DOM content is fully loaded
-document.addEventListener('DOMContentLoaded', function () {
+// Hide the loader once the page is fully loaded
+window.addEventListener('load', function () {
     const loader = document.getElementById('loader');
     const bodyLoader = document.querySelector('.bodyLoader');
 
