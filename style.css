@@ -1429,6 +1429,8 @@ body .postContent p {
 }
 
 @media (max-width:640px) {
+    .postDate, .readingTime{
+        font-size:11px;
     .postContent{
         padding: 2rem;
     }
