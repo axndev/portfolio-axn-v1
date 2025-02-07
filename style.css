@@ -1428,6 +1428,9 @@ body .postContent p {
 }
 
 @media (max-width:640px) {
+     .logo a{
+    font-size: 25px;
+}
     .postDate, .readingTime{
         font-size:11px;
     }
