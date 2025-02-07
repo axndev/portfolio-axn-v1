@@ -7,10 +7,14 @@ tl.from(".menuIcons",{
 tl.from(".logo",{
     y:-20,
     opacity:0,
-    delay:.5
+    delay:.2
 })
 tl.from(".menu-items li",{
     y:-20,
     opacity:0,
     stagger:.3
+})
+tl.from(".mobileSearch",{
+    y:-20,
+    opacity:0,
 })

@@ -375,7 +375,7 @@ nav {
 }
 
 .menuIcons {
-    z-index:99;
+    z-index: 99;
     display: none;
     position: relative;
     width: 25px;
@@ -404,8 +404,13 @@ nav {
     transition: transform 0.4s ease-in-out;
 }
 
-.logo {
+.mobileNav .logo a{
     color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+}
+.mobileNav .logo a:hover{
+    color: var(--white) !important;
 }
 
 .logo span {
@@ -837,8 +842,8 @@ form {
     gap: 2rem;
 }
 
-input,
-textarea {
+.contact input,
+.contact textarea, .conmeentBox textarea {
     width: 100%;
     border: none;
     outline: none;
@@ -852,7 +857,7 @@ textarea {
     font-size: 17px;
 }
 
-.input:hover {
+.contact .input:hover {
     background-color: var(--primary-color);
     color: white;
     box-shadow: 3px 3px 0px 3px white;
@@ -875,7 +880,7 @@ textarea {
     width: 100%;
 }
 
-input::placeholder {
+.contact input::placeholder {
     color: var(--white);
     opacity: 1;
 }
@@ -947,8 +952,396 @@ footer .container {
     color: var(--primary-color);
 }
 
+.blog .darkmytitle {
+    text-align: left;
+}
+
+.blog {
+    margin-top: 2rem;
+}
+
+.articles {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.article {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 60vw;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: capitalize;
+    color: black;
+    box-shadow: -3px 3px 0px 3px var(--secondary-color);
+}
+
+.writerInfo img {
+    width: 40px;
+    border-radius: 50%;
+}
+.mainDet,.artinfobox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.artTitle {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+}
+
+.artTitle:hover {
+    color: var(--hover-color);
+}
+
+.postDate,
+.readingTime {
+    color: #0000007d;
+}
+
+.readingTime {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.readingTime svg {
+    width: 20px;
+    height: 20px;
+    fill: #0000007d;
+}
+
+.writerInfo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(0, 0, 0, 0.829);
+    font-size: 15px;
+}
+
+.writerName {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.writerName:hover {
+    color: var(--primary-color);
+}
+
+.artLinkbtn,
+.commentbtn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    max-width: 120px;
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: -2px 2px 0px 2px var(--secondary-color);
+    transition: all .3s ease-in-out;
+    border: 2px solid var(--secondary-color);
+}
+
+.artLinkbtn:hover,
+.commentbtn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 2px 2px 0px 2px var(--primary-color);
+}
+
+.artDesc {
+    font-size: 17px;
+}
+
+.postTitle {
+    font-size: 20px;
+    text-align: center;
+}
+
+.postContent {
+    width: 90%;
+    margin: auto;
+    margin-top: 3.5rem;
+    background-color: white;
+    box-shadow: -3px 3px 0px 3px var(--secondary-color);
+    border-radius: 8px;
+    text-transform: capitalize;
+    color: var(--secondary-color) !important;
+    padding: 3rem;
+}
+
+body .postContent p {
+    color: var(--secondary-color) !important;
+    font-size: 16px;
+    line-height: 27px;
+    margin: 5px 0;
+}
+
+.conmeentBox {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: white;
+    box-shadow: -3px 3px 0px 3px var(--secondary-color);
+    border-radius: 8px;
+    text-transform: capitalize;
+    color: var(--secondary-color) !important;
+    padding: 2rem 1.3rem;
+}
+
+.postedComments {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+    text-transform: capitalize;
+    color: var(--secondary-color) !important;
+}
+
+.postedComments .commentHead {
+    font-size: 25px;
+    text-transform: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.411);
+    width: 100%;
+    padding: 7px 0;
+    display: block;
+}
+
+.commentDiv {
+    display: flex;
+    gap: 15px;
+    align-items: start;
+    margin: 1rem 0;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.commentDiv img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    margin-top: 5px;
+}
+
+.commentDiv .userDet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.userDet .date {
+    font-size: 12px;
+    color: #000000a6;
+}
+
+.commentDet {
+    padding: 1.5rem;
+    width: 60%;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    background-color: #adb8d8b0;
+}
+
+.comment {
+    margin: 15px 0;
+}
+
+.replybtn {
+    background-color: var(--white);
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 7px 14px;
+    border-radius: var(--border-radius);
+    display: flex;
+    max-width: 70px;
+    justify-content: center;
+    box-shadow: -1px 1px 0px 1px var(--secondary-color);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.replybtn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 1px 1px 0px 1px white;
+}
+
+.userDet .userName {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.commentHead {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+#commentTextBox {
+    margin-top: 1.5rem;
+    margin-bottom: 15px;
+    background-color: #adb8d8b0;
+    border: 1px solid var(--secondary-color);
+    height: 90px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#commentTextBox:active,
+#commentTextBox:focus {
+    background-color: white;
+}
+
+#commentTextBox::placeholder {
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.postContent h1,
+.postContent h2,
+.postContent h3,
+.postContent h4 {
+    margin: 10px 0;
+}
+
+.postContent .writerInfo {
+    justify-content: center;
+    margin: 10px 0;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid transparent;
+    border-radius: 5px;
+    transition: none;
+}
+
+.search.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    padding: 6px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 0px 1px var(--primary-color);
+    transition: all .2s ease-in-out;
+}
+
+.search svg {
+    width: 25px;
+    height: 25px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.mobileSearch svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.search.active svg {
+    fill: var(--primary-color);
+}
+
+.searchMenu a {
+    display: none;
+}
+
+.menu-items #searchInput {
+    width: 100%;
+    background-color: none;
+    border: none;
+    outline: none;
+    padding: 7px;
+    font-size: 20px;
+    display: none;
+}
+
+.search.active #searchInput {
+    display: block;
+}
+
+.menu-items #searchInput::placeholder {
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
+.mobileSearch {
+    display: none;
+}
+
+.mobileSearch input {
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    padding: 6px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 0px 1px var(--primary-color);
+    transition: all .2s ease-in-out;
+    display: none;
+}
+.mobileSearch.active{
+    width: 100%;
+}
+.mobileSearch input::placeholder {
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
 /* Mobile Menu Adjustments */
 @media (max-width: 860px) {
+    .search {
+        display: none;
+    }
+
+    .mobileSearch {
+        display: flex;
+        gap: 10px;
+        background-color: var(--secondary-color);
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .postContent,
+    .conmeentBox,
+    .postedComments {
+        width: auto;
+    }
+
+    .article {
+        max-width: none;
+    }
+
     #backToTop {
         bottom: 30px;
         right: 30px;
@@ -983,9 +1376,12 @@ footer .container {
         flex-direction: column;
         gap: 3rem;
     }
-    footer .responsiveContainer{
-        gap: 1rem;;
+
+    footer .responsiveContainer {
+        gap: 1rem;
+        ;
     }
+
     .container {
         padding: 0 1.2rem;
     }
@@ -1026,11 +1422,6 @@ footer .container {
         padding: 0;
     }
 
-    .logo {
-        position: absolute;
-        right: 1rem;
-    }
-
     .contact .contactStart {
         gap: 2rem;
     }
@@ -1038,6 +1429,28 @@ footer .container {
 }
 
 @media (max-width:640px) {
+    .postContent{
+        padding: 2rem;
+    }
+    body h1{
+        font-size: 22px;
+    }
+    body h2, .artTitle{
+        font-size: 18px;
+    }
+    body h3{
+        font-size: 15px;
+    }
+    body p, .artDesc{
+        font-size: 13px;
+    }
+    .postContent .writerInfo{
+        flex-direction: column;
+    }
+    .commentDet {
+        width: 100%;
+    }
+
     .myName {
         font-size: 1.9rem;
     }

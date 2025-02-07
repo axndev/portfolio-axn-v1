@@ -87,3 +87,13 @@ backToTopButton.onclick = function () {
         behavior: 'smooth'  // Smooth scroll to the top
     });
 };
+$('#searchBtn').click(function(){
+    $('.search').toggleClass('active');
+    $('.menu-items').toggleClass('searchMenu');
+});
+$('#mobileSearchBtn').click(function(){
+    $('.mobileSearch').toggleClass('active');
+    $('.menuIcons').toggle();
+    $('.logo').toggle('');
+    $('.mobileSearch input').toggle();
+});
