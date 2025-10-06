@@ -1,6 +1,6 @@
 # AXN Dev Portfolio v1
 
-A modern developer portfolio built with **Next.js** and **Tailwind CSS**.  
+A modern developer portfolio built with **HTML** ,  **CSS** and **Java Script, GSAP**.  
 This version (v1) showcases my professional projects, skills, and contact details in a clean, responsive layout.
 
 ## 🚀 Tech Stack
